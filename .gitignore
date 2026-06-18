@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+.smarttomcat/
+.mvn/
+target/
+*.iml
+*.log
+
+# Local secrets
+.env
+.env.*
+!.env.example

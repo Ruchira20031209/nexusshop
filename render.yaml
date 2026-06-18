@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: nexusshop
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /index.jsp
+    envVars:
+      - key: NEXUS_DB_URL
+        sync: false
+      - key: NEXUS_DB_USERNAME
+        sync: false
+      - key: NEXUS_DB_PASSWORD
+        sync: false

@@ -1,0 +1,84 @@
+:root{
+  --bg: #f6f7fb; --card:#fff; --muted:#6b7280; --border:#e5e7eb;
+  --success:#10b981; --danger:#ef4444; --warning:#f59e0b;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0f1115; --card:#151922; --muted:#9aa4b2; --border:#232737; }
+}
+body{ background: var(--bg); }
+
+.content{ padding: 1rem 1.2rem; }
+.page-title{ margin:0; }
+.page-subtitle{ color:var(--muted); margin:.15rem 0 0; }
+
+.card{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:.9rem; box-shadow:0 8px 24px rgba(0,0,0,.04); }
+.filters{ margin-bottom: .8rem; }
+.filters-row{ display:grid; grid-template-columns: 1fr 180px 180px 180px; gap:.6rem; }
+.filters input[type="search"], .select{
+  border:1px solid var(--border); border-radius:10px; padding:.6rem .7rem; outline:none; background:#fff;
+}
+
+.table-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:.5rem; }
+.bulk-actions{ display:flex; align-items:center; gap:.5rem; }
+.bulk-actions .danger{ border-color:#fecaca; background:#fff5f5; }
+.meta{ color:var(--muted); }
+
+.table-wrap{ overflow:auto; border:1px solid var(--border); border-radius:12px; }
+.table{ width:100%; border-collapse:collapse; }
+.table th, .table td{ padding:.65rem .6rem; white-space:nowrap; border-bottom:1px solid var(--border); }
+.table thead th{ background:var(--card); position:sticky; top:0; z-index:1; text-align:left; font-weight:700; }
+.table tr:hover td{ background:rgba(0,0,0,.02); }
+
+.badge{
+  display:inline-block; border-radius:999px; padding:.2rem .55rem; font-size:.8rem; font-weight:700;
+}
+.badge.Active{ background:#ecfdf5; color:#065f46; }
+.badge.Suspended{ background:#fef2f2; color:#991b1b; }
+.badge.Invited{ background:#fff7ed; color:#9a3412; }
+
+.row-actions{ display:flex; gap:.35rem; }
+.icon-mini{ border:1px solid var(--border); background:#fff; border-radius:10px; padding:.35rem .5rem; cursor:pointer; }
+
+.table-footer{ display:flex; align-items:center; justify-content:space-between; padding:.6rem 0 0; }
+.pagination{ display:flex; gap:.35rem; }
+.pagination button{ border:1px solid var(--border); background:#fff; border-radius:10px; padding:.45rem .65rem; cursor:pointer; }
+.pagination button.active{ background: var(--primary); color:#fff; border-color:transparent; }
+
+.rowsize{ display:flex; align-items:center; gap:.4rem; color:var(--muted); }
+
+/* Modal */
+.modal{ position:fixed; inset:0; display:none; }
+.modal[aria-hidden="false"]{ display:block; }
+.modal__backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.45); }
+.modal__panel{
+  position:relative; z-index:2; max-width:680px; margin:7vh auto; background:var(--card); border:1px solid var(--border);
+  border-radius:14px; box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.modal__head{ display:flex; align-items:center; justify-content:space-between; padding:.9rem 1rem; border-bottom:1px solid var(--border); }
+.modal__body{ padding:1rem; }
+.modal__foot{ display:flex; justify-content:flex-end; gap:.5rem; padding: .2rem 1rem 1rem; }
+
+.form-row{ display:grid; gap:.4rem; margin-bottom:.75rem; }
+.form-row .help{ font-size:.85rem; color:var(--muted); }
+.grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap:.8rem; }
+@media (max-width: 800px){ .filters-row{ grid-template-columns: 1fr; } .grid-2{ grid-template-columns:1fr; } }
+
+input[type="text"], input[type="email"], select{
+  border:1px solid var(--border); border-radius:10px; padding:.7rem .8rem; outline:none; background:#fff;
+}
+input:focus, select:focus{ box-shadow:0 0 0 3px rgba(98,84,243,.12); border-color:var(--primary); }
+
+.btn-primary, .btn-secondary{
+  padding:.7rem 1rem; border:none; border-radius:10px; font-weight:700; cursor:pointer;
+}
+.btn-primary{ background:var(--primary); color:#fff; }
+.btn-secondary{ background:#fff; border:1px solid var(--border); }
+.btn-secondary:hover{ background:#f7f7fb; }
+
+.req{ color:#e11d48; }
+
+.chips{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.chip{
+  border:1px dashed var(--border); background:#fff; border-radius:999px; padding:.35rem .6rem; cursor:pointer; font-weight:600; font-size:.9rem;
+}
+.chip.active{ border-style:solid; background:#eef2ff; border-color: var(--primary); }

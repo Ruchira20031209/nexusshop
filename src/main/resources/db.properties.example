@@ -1,0 +1,17 @@
+# Example 1: Local SQL Server / SQL Server Express
+db.driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
+db.url=jdbc:sqlserver://localhost:1433;databaseName=NexusShop2;encrypt=true;trustServerCertificate=true;
+db.username=sa
+db.password=change_me
+
+# Example 2: Azure SQL Database
+# db.driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
+# db.url=jdbc:sqlserver://your-server.database.windows.net:1433;databaseName=NexusShop2;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+# db.username=your_sql_admin_user
+# db.password=change_me
+
+# Example 3: Generic JDBC (requires matching JDBC driver dependency)
+# db.driver=org.postgresql.Driver
+# db.url=jdbc:postgresql://localhost:5432/nexusshop
+# db.username=postgres
+# db.password=change_me

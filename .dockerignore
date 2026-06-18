@@ -1,0 +1,12 @@
+.git
+.idea
+.smarttomcat
+.mvn
+target
+*.log
+.DS_Store
+Orders.PNG
+ProductManager.PNG
+Products.PNG
+db order iteam.PNG
+db1.PNG

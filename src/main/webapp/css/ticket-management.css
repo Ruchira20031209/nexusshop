@@ -1,0 +1,36 @@
+.ticket-page { padding: 7.5rem 0 3rem; }
+.ticket-page .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.backlink { display:inline-flex; align-items:center; gap:.4rem; margin-bottom:.4rem; color:#374151; }
+
+.grid { display:grid; grid-template-columns: 320px 1fr; gap:.9rem; }
+.surface { background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.05); padding:.9rem; }
+
+.side .kv { display:grid; grid-template-columns:120px 1fr; gap:.4rem; margin-bottom:.5rem; }
+.side .label { color:#64748b; }
+.divider { height:1px; background:rgba(0,0,0,.08); margin:.7rem 0; }
+.form-row { display:grid; gap:.3rem; margin-bottom:.6rem; }
+.select, textarea, input { border:1px solid rgba(0,0,0,.12); border-radius:10px; padding:.55rem .7rem; }
+
+.btn { border:1px solid rgba(0,0,0,.12); border-radius:10px; padding:.55rem .7rem; background:#fff; display:inline-flex; align-items:center; gap:.45rem; cursor:pointer; }
+.btn-ghost { background:#fff; }
+.btn-primary { background:var(--primary); color:#fff; border-color:transparent; }
+.btn.danger { border-color:#fecaca; background:#fff5f5; }
+
+.thread-head { display:flex; align-items:center; justify-content:space-between; gap:.6rem; margin-bottom:.5rem; }
+.subject { font-weight:800; }
+.badge { display:inline-block; border-radius:999px; padding:.2rem .55rem; font-size:.8rem; font-weight:700; background:#eff6ff; color:#1e40af; }
+
+.thread { border:1px solid rgba(0,0,0,.06); border-radius:12px; padding:.6rem; height: 460px; overflow:auto; background:#fafafa; }
+.msg { max-width:70%; padding:.55rem .7rem; border-radius:12px; margin:.3rem 0; line-height:1.4; }
+.msg .meta { font-size:.8rem; color:#64748b; margin-top:.2rem; }
+.msg.customer { background:#ffffff; border:1px solid rgba(0,0,0,.08); }
+.msg.agent { background:#eef2ff; border:1px solid rgba(99,102,241,.18); margin-left:auto; }
+
+.composer { margin-top:.6rem; display:grid; gap:.4rem; }
+.composer-tools { display:flex; justify-content:flex-end; }
+.composer-actions { display:flex; gap:.5rem; justify-content:flex-end; }
+
+@media (max-width: 900px){
+  .grid { grid-template-columns: 1fr; }
+  .thread { height: 420px; }
+}
